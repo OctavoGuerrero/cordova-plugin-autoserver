@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-autoserver" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Autoserver</name>
+    <description>This Apache Cordova plugin will serve the contents of www directory in your Android App.</description>
+    <author>Alfonso Guerrero</author>
+    <license>MIT</license>
+    <keywords>httpd,web,server,http</keywords>
+
+    <hook type="after_plugin_install" src="scripts/after_install.js" />
+    <hook type="before_plugin_uninstall" src="scripts/before_uninstall.js" />
+  <engines>
+        <engine name="cordova" version=">=2.9" />
+    </engines>
+
+    <allow-navigation href="*" />
+
+    <platform name="android">
+
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="Autoserver">
+        <param name="android-package" value="com.gebrais.cordova.autoserver.Autoserver" />
+        <param name="onload" value="true"/>
+      </feature>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+		    <dict>
+		        <key>NSExceptionDomains</key>
+		        <dict>
+		            <key>localhost</key>
+		            <dict>
+		                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+		                <true/>
+		            </dict>
+		        </dict>
+		    </dict>
+		</config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    </config-file>
+
+    <source-file src="src/android/Autoserver.java" target-dir="src/com/gebrais/cordova/autoserver" />
+    <source-file src="src/android/AndroidFile.java" target-dir="src/com/gebrais/cordova/autoserver" />
+    <source-file src="src/android/NanoHTTPD.java" target-dir="src/com/gebrais/cordova/autoserver" />
+    <source-file src="src/android/WebServer.java" target-dir="src/com/gebrais/cordova/autoserver" />
+
+    </platform>
+
+
+
+</plugin>

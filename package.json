@@ -1,0 +1,20 @@
+{
+	"name": "cordova-plugin-autoserver",
+	"version": "0.0.1",
+	"description": "An Android Cordova plugin that serves www directory.",
+	"keywords": [
+		"Httpd",
+		"Server",
+		"ecosystem:cordova",
+		"cordova-android"
+	],
+	"license": "MIT",
+	"author": "Alfonso Guerrero <aguerreromier@gmail.com>",
+	"engines": {},
+	"cordova": {
+		"id": "cordova-plugin-autoserver",
+		"platforms": [
+			"android"
+		]
+	}
+}
