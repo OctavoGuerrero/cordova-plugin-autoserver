@@ -12,13 +12,12 @@ After the plugin is installed, it changes the `config.xml` in your project root 
 
         <content src="http://localhost:8888" />
 
-You don't need to do any more.
+You don't need to do anything else.
 
 ## Credits
 
 The local web server implementation is from [NanoHTTPD](https://github.com/NanoHttpd/nanohttpd).
 
 This Cordova plugin is built based on following 2 plugins, and thanks to the authors.<ul>
-*    <li> [CorHttpd](https://github.com/floatinghotpot/cordova-httpd.git), a embeded httpd for cordova
-*    <li> Scripts (after_install and before uninstall) are from [cordova-local-webserve](https://github.com/oakwood/cordova-local-webserver.git), a similar plugin, but only for ios.
-* </ul>
+* [CorHttpd](https://github.com/floatinghotpot/cordova-httpd.git), a embeded httpd for cordova
+* Scripts (after_install and before uninstall) are from [cordova-local-webserve](https://github.com/oakwood/cordova-local-webserver.git), a similar plugin, but only for ios.
